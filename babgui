@@ -1,0 +1,513 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local BABXP = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local XPBackground = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local Minimize = Instance.new("ImageButton")
+local Close = Instance.new("ImageButton")
+local Maximize = Instance.new("ImageButton")
+local Title_2 = Instance.new("TextLabel")
+local Line = Instance.new("ImageLabel")
+local DragFrame = Instance.new("Frame")
+local TheXPloits = Instance.new("Frame")
+local AutoGrind = Instance.new("Frame")
+local Checkbox = Instance.new("ImageButton")
+local Title_3 = Instance.new("TextLabel")
+local WaitTimeChanger = Instance.new("Frame")
+local Title_4 = Instance.new("TextLabel")
+local TypeTextBG = Instance.new("ImageLabel")
+local WaitTimeEnter = Instance.new("TextBox")
+local BridgeMaker = Instance.new("Frame")
+local GenBridgeButton = Instance.new("TextButton")
+local bg = Instance.new("ImageButton")
+
+--Properties:
+
+BABXP.Name = "BABXP"
+BABXP.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+BABXP.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = BABXP
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.Position = UDim2.new(0.331970572, 0, 0.26621154, 0)
+MainFrame.Size = UDim2.new(0, 279, 0, 470)
+
+XPBackground.Name = "XPBackground"
+XPBackground.Parent = MainFrame
+XPBackground.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+XPBackground.BackgroundTransparency = 1.000
+XPBackground.Position = UDim2.new(-0.336917549, 0, 0.0553192124, 0)
+XPBackground.Size = UDim2.new(0.852141976, 0, 0.45106411, 0)
+XPBackground.Image = "http://www.roblox.com/asset/?id=5838849817"
+XPBackground.ScaleType = Enum.ScaleType.Slice
+XPBackground.SliceCenter = Rect.new(7, 33, 7, 33)
+
+Title.Name = "Title"
+Title.Parent = XPBackground
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.0272911415, 0, 0, 0)
+Title.Size = UDim2.new(0, 155, 0, 31)
+Title.ZIndex = 2
+Title.Font = Enum.Font.Arcade
+Title.Text = "babab.exe"
+Title.TextColor3 = Color3.fromRGB(209, 209, 209)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Minimize.Name = "Minimize"
+Minimize.Parent = XPBackground
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.Position = UDim2.new(0.70758462, 0, 0, 0)
+Minimize.Size = UDim2.new(0, 23, 0, 31)
+Minimize.ZIndex = 15
+Minimize.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Minimize.ImageTransparency = 1.000
+
+Close.Name = "Close"
+Close.Parent = XPBackground
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.887177289, 0, 0, 0)
+Close.Size = UDim2.new(0, 27, 0, 31)
+Close.ZIndex = 15
+Close.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Close.ImageTransparency = 1.000
+
+Maximize.Name = "Maximize"
+Maximize.Parent = XPBackground
+Maximize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Maximize.BackgroundTransparency = 1.000
+Maximize.Position = UDim2.new(0.803367436, 0, 0, 0)
+Maximize.Size = UDim2.new(0, 20, 0, 31)
+Maximize.ZIndex = 15
+Maximize.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Maximize.ImageTransparency = 1.000
+
+Title_2.Name = "Title"
+Title_2.Parent = MainFrame
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(-0.333333313, 0, 0.121276595, 0)
+Title_2.Size = UDim2.new(0, 236, 0, 36)
+Title_2.ZIndex = 2
+Title_2.Font = Enum.Font.Arcade
+Title_2.Text = "Auto Grinder"
+Title_2.TextColor3 = Color3.fromRGB(139, 139, 139)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+Line.Name = "Line"
+Line.Parent = MainFrame
+Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line.BackgroundTransparency = 1.000
+Line.Position = UDim2.new(-0.333333313, 0, 0.199970588, 0)
+Line.Size = UDim2.new(0, 236, 0, 6)
+Line.Image = "rbxassetid://6531586437"
+
+DragFrame.Name = "DragFrame"
+DragFrame.Parent = MainFrame
+DragFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DragFrame.BackgroundTransparency = 1.000
+DragFrame.Position = UDim2.new(-0.336917549, 0, 0.0553192124, 0)
+DragFrame.Size = UDim2.new(0, 161, 0, 30)
+
+TheXPloits.Name = "TheXPloits"
+TheXPloits.Parent = MainFrame
+TheXPloits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TheXPloits.BackgroundTransparency = 1.000
+TheXPloits.Position = UDim2.new(-0.333333343, 0, 0.2106383, 0)
+TheXPloits.Size = UDim2.new(0, 236, 0, 284)
+
+AutoGrind.Name = "AutoGrind"
+AutoGrind.Parent = TheXPloits
+AutoGrind.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AutoGrind.BackgroundTransparency = 0.900
+AutoGrind.Position = UDim2.new(0.00400000112, 0, 0.00262150285, 0)
+AutoGrind.Size = UDim2.new(0, 235, 0, 32)
+
+Checkbox.Name = "Checkbox"
+Checkbox.Parent = AutoGrind
+Checkbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Checkbox.BackgroundTransparency = 1.000
+Checkbox.Position = UDim2.new(0.837628245, 0, 0.0925403163, 0)
+Checkbox.Size = UDim2.new(0, 26, 0, 26)
+Checkbox.Image = "rbxassetid://6531499312"
+
+Title_3.Name = "Title"
+Title_3.Parent = AutoGrind
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.Position = UDim2.new(0.0193378851, 0, 0, 0)
+Title_3.Size = UDim2.new(0, 186, 0, 32)
+Title_3.ZIndex = 2
+Title_3.Font = Enum.Font.Arcade
+Title_3.Text = "Auto Grind:"
+Title_3.TextColor3 = Color3.fromRGB(139, 139, 139)
+Title_3.TextScaled = true
+Title_3.TextSize = 14.000
+Title_3.TextWrapped = true
+
+WaitTimeChanger.Name = "WaitTimeChanger"
+WaitTimeChanger.Parent = TheXPloits
+WaitTimeChanger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WaitTimeChanger.BackgroundTransparency = 0.900
+WaitTimeChanger.Position = UDim2.new(0.00400000112, 0, 0.115297556, 0)
+WaitTimeChanger.Size = UDim2.new(0, 235, 0, 57)
+
+Title_4.Name = "Title"
+Title_4.Parent = WaitTimeChanger
+Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.BackgroundTransparency = 1.000
+Title_4.Position = UDim2.new(0.0193378851, 0, 0, 0)
+Title_4.Size = UDim2.new(0, 230, 0, 32)
+Title_4.ZIndex = 2
+Title_4.Font = Enum.Font.Arcade
+Title_4.Text = "Seconds Between TP:"
+Title_4.TextColor3 = Color3.fromRGB(139, 139, 139)
+Title_4.TextScaled = true
+Title_4.TextSize = 14.000
+Title_4.TextWrapped = true
+
+TypeTextBG.Name = "TypeTextBG"
+TypeTextBG.Parent = WaitTimeChanger
+TypeTextBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TypeTextBG.BackgroundTransparency = 1.000
+TypeTextBG.Position = UDim2.new(0.259574473, 0, 0.456140339, 0)
+TypeTextBG.Size = UDim2.new(0, 116, 0, 25)
+TypeTextBG.Image = "rbxassetid://6531499454"
+
+WaitTimeEnter.Name = "WaitTimeEnter"
+WaitTimeEnter.Parent = WaitTimeChanger
+WaitTimeEnter.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WaitTimeEnter.BackgroundTransparency = 1.000
+WaitTimeEnter.Position = UDim2.new(0.259574473, 0, 0.456140339, 0)
+WaitTimeEnter.Size = UDim2.new(0, 115, 0, 25)
+WaitTimeEnter.Font = Enum.Font.Arcade
+WaitTimeEnter.PlaceholderText = "Time"
+WaitTimeEnter.Text = ""
+WaitTimeEnter.TextColor3 = Color3.fromRGB(139, 139, 139)
+WaitTimeEnter.TextScaled = true
+WaitTimeEnter.TextSize = 14.000
+WaitTimeEnter.TextWrapped = true
+
+BridgeMaker.Name = "BridgeMaker"
+BridgeMaker.Parent = TheXPloits
+BridgeMaker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BridgeMaker.BackgroundTransparency = 0.900
+BridgeMaker.Position = UDim2.new(0.00400000112, 0, 0.316001773, 0)
+BridgeMaker.Size = UDim2.new(0, 235, 0, 49)
+
+GenBridgeButton.Name = "GenBridgeButton"
+GenBridgeButton.Parent = BridgeMaker
+GenBridgeButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GenBridgeButton.BackgroundTransparency = 1.000
+GenBridgeButton.Position = UDim2.new(0.239265606, 0, 0.106804669, 0)
+GenBridgeButton.Size = UDim2.new(0, 117, 0, 38)
+GenBridgeButton.ZIndex = 2
+GenBridgeButton.Font = Enum.Font.Arcade
+GenBridgeButton.Text = "Create Bridge"
+GenBridgeButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+GenBridgeButton.TextScaled = true
+GenBridgeButton.TextSize = 14.000
+GenBridgeButton.TextWrapped = true
+
+bg.Name = "bg"
+bg.Parent = BridgeMaker
+bg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bg.BackgroundTransparency = 1.000
+bg.Position = UDim2.new(0.216978684, 0, 0.106804669, 0)
+bg.Size = UDim2.new(0, 131, 0, 38)
+bg.Image = "rbxassetid://6533134734"
+
+-- Scripts:
+
+local function BXWQAG_fake_script() -- Minimize.MinimizeScript 
+	local script = Instance.new('LocalScript', Minimize)
+
+	function leftClick()
+		script.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		script.Parent.Parent.Parent.Position = UDim2.new(0.02,-0,0.966,-0)
+	end 
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(BXWQAG_fake_script)()
+local function YEPHMZ_fake_script() -- Close.CloseScript 
+	local script = Instance.new('LocalScript', Close)
+
+	function leftClick()
+		script.Parent.Parent.Parent.SoundScript:WaitForChild("ShutdownSound"):Play()
+		script.Parent.Parent.Parent.Parent:Destroy()
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(YEPHMZ_fake_script)()
+local function AZRE_fake_script() -- Maximize.MaximizeScript 
+	local script = Instance.new('LocalScript', Maximize)
+
+	function leftClick()
+		script.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		script.Parent.Parent.Parent.Position = UDim2.new(0.01, 0,0.181, 0)
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(AZRE_fake_script)()
+local function QVQXTIW_fake_script() -- MainFrame.SoundScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	script.Name = "SoundScript"
+	
+	local ClickSound = Instance.new("Sound")
+	ClickSound.Name = "ClickSound"
+	ClickSound.Parent = script
+	ClickSound.SoundId = "rbxassetid://907514098"
+	
+	local ShutdownSound = Instance.new("Sound")
+	ShutdownSound.Name = "ShutdownSound"
+	ShutdownSound.Parent = script
+	ShutdownSound.SoundId = "rbxassetid://784747919"
+	
+	local ErrorSound = Instance.new("Sound")
+	ErrorSound.Name = "ErrorSound"
+	ErrorSound.Parent = script
+	ErrorSound.SoundId = "rbxassetid://3041205264"
+end
+coroutine.wrap(QVQXTIW_fake_script)()
+local function QTKCXZD_fake_script() -- MainFrame.DragScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	script.Name = "DragScript"
+	
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.DragFrame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(QTKCXZD_fake_script)()
+local function GCTKIWS_fake_script() -- Checkbox.SetValue 
+	local script = Instance.new('LocalScript', Checkbox)
+
+	local player = game.Players.LocalPlayer
+	local char = player.Character
+	
+	local currentlyChecked = false
+	
+	function leftClick()
+		if currentlyChecked == false then
+			currentlyChecked = true
+			script.Parent.Image = "rbxassetid://6531499566"
+			script.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		else
+			currentlyChecked = false
+			script.Parent.Image = "rbxassetid://6531499312"
+			script.Parent.Parent.Parent.Parent.SoundScript:WaitForChild("ClickSound"):Play()
+		end
+	end
+	
+	local waitTime = script.Parent.Parent.waitTime
+	
+	local stage1 = CFrame.new(-48,25,1376)
+	local stage2 = CFrame.new(-48,25,2133)
+	local stage3 = CFrame.new(-48,25,2908)
+	local stage4 = CFrame.new(-48,25,3677)
+	local stage5 = CFrame.new(-48,25,4449)
+	local stage6 = CFrame.new(-48,25,5219)
+	local stage7 = CFrame.new(-48,25,5985)
+	local stage8 = CFrame.new(-48,25,6757)
+	local stage9 = CFrame.new(-48,25,7530)
+	local stage10 = CFrame.new(-48,25,8295)
+	local endChest = CFrame.new(-56,-361,9489)
+	
+	
+	while currentlyChecked do
+	wait(waitTime)
+	char:SetPrimaryPartCFrame(stage1)
+	wait(waitTime)
+	char:SetPrimaryPartCFrame(stage2)
+	wait(waitTime)
+	char:SetPrimaryPartCFrame(stage3)
+	wait(waitTime)
+	char:SetPrimaryPartCFrame(stage4)
+	wait(waitTime)
+	char:SetPrimaryPartCFrame(stage5)
+	wait(waitTime)
+	char:SetPrimaryPartCFrame(stage6)
+	wait(waitTime)
+	char:SetPrimaryPartCFrame(stage7)
+	wait(waitTime)
+	char:SetPrimaryPartCFrame(stage8)
+	wait(waitTime)
+	char:SetPrimaryPartCFrame(stage9)
+	wait(waitTime)
+	char:SetPrimaryPartCFrame(stage10)
+	wait(waitTime)
+	char:SetPrimaryPartCFrame(endChest)
+	wait(waitTime)
+	char:SetPrimaryPartCFrame(endChest)
+	end
+	
+	
+	
+end
+coroutine.wrap(GCTKIWS_fake_script)()
+local function ZFRHNNE_fake_script() -- WaitTimeEnter.updater 
+	local script = Instance.new('LocalScript', WaitTimeEnter)
+
+	local waitTime = script.Parent.Parent.Parent.AutoGrind.waitTime
+	
+	while true do
+		wait(1)
+		if script.Parent.Text == "" or " " then print("no value")
+			else
+		waitTime.Value = script.Parent.Text
+		end
+	end
+end
+coroutine.wrap(ZFRHNNE_fake_script)()
+local function BZVVTTH_fake_script() -- GenBridgeButton.ahhahabridgegobesfskfdslk 
+	local script = Instance.new('LocalScript', GenBridgeButton)
+
+	local part1 = Instance.new('Part', game.Workspace)
+	part1.Name = 'Part'
+	part1.Position = Vector3.new(-46.979999542236, 0.5000039935112, 788.98193359375)
+	part1.Size = Vector3.new(4, 1, 2048)
+	part1.Orientation = Vector3.new(0, 0, 0)
+	part1.Color = Color3.fromRGB(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part1.BrickColor = BrickColor.new(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part1.Material = Enum.Material['Plastic']
+	part1.Transparency = 0
+	part1.Reflectance = 0
+	part1.Anchored = true
+	part1.CanCollide = true
+	part1.Locked = false
+	local part2 = Instance.new('Part', game.Workspace)
+	part2.Name = 'Part'
+	part2.Position = Vector3.new(-46.979999542236, 0.5000039935112, 2816.9614257813)
+	part2.Size = Vector3.new(4, 1, 2048)
+	part2.Orientation = Vector3.new(0, 0, 0)
+	part2.Color = Color3.fromRGB(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part2.BrickColor = BrickColor.new(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part2.Material = Enum.Material['Plastic']
+	part2.Transparency = 0
+	part2.Reflectance = 0
+	part2.Anchored = true
+	part2.CanCollide = true
+	part2.Locked = false
+	local part3 = Instance.new('Part', game.Workspace)
+	part3.Name = 'Part'
+	part3.Position = Vector3.new(-46.979999542236, 0.5000039935112, 2763.3767089844)
+	part3.Size = Vector3.new(4, 1, 2048)
+	part3.Orientation = Vector3.new(0, 0, 0)
+	part3.Color = Color3.fromRGB(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part3.BrickColor = BrickColor.new(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part3.Material = Enum.Material['Plastic']
+	part3.Transparency = 0
+	part3.Reflectance = 0
+	part3.Anchored = true
+	part3.CanCollide = true
+	part3.Locked = false
+	local part4 = Instance.new('Part', game.Workspace)
+	part4.Name = 'Part'
+	part4.Position = Vector3.new(-46.979999542236, 0.5000039935112, 6699.9638671875)
+	part4.Size = Vector3.new(4, 1, 2048)
+	part4.Orientation = Vector3.new(0, 0, 0)
+	part4.Color = Color3.fromRGB(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part4.BrickColor = BrickColor.new(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part4.Material = Enum.Material['Plastic']
+	part4.Transparency = 0
+	part4.Reflectance = 0
+	part4.Anchored = true
+	part4.CanCollide = true
+	part4.Locked = false
+	local part5 = Instance.new('Part', game.Workspace)
+	part5.Name = 'Part'
+	part5.Position = Vector3.new(-46.979999542236, 0.5000039935112, 6753.5483398438)
+	part5.Size = Vector3.new(4, 1, 2048)
+	part5.Orientation = Vector3.new(0, 0, 0)
+	part5.Color = Color3.fromRGB(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part5.BrickColor = BrickColor.new(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part5.Material = Enum.Material['Plastic']
+	part5.Transparency = 0
+	part5.Reflectance = 0
+	part5.Anchored = true
+	part5.CanCollide = true
+	part5.Locked = false
+	local part6 = Instance.new('Part', game.Workspace)
+	part6.Name = 'Part'
+	part6.Position = Vector3.new(-46.979999542236, 0.5000039935112, 4725.5688476563)
+	part6.Size = Vector3.new(4, 1, 2048)
+	part6.Orientation = Vector3.new(0, 0, 0)
+	part6.Color = Color3.fromRGB(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part6.BrickColor = BrickColor.new(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part6.Material = Enum.Material['Plastic']
+	part6.Transparency = 0
+	part6.Reflectance = 0
+	part6.Anchored = true
+	part6.CanCollide = true
+	part6.Locked = false
+	local part7 = Instance.new('Part', game.Workspace)
+	part7.Name = 'Part'
+	part7.Position = Vector3.new(-46.979999542236, 0.5000039935112, 8211.904296875)
+	part7.Size = Vector3.new(4, 1, 1003.6699829102)
+	part7.Orientation = Vector3.new(0, 0, 0)
+	part7.Color = Color3.fromRGB(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part7.BrickColor = BrickColor.new(0.63921570777893, 0.63529413938522, 0.64705884456635)
+	part7.Material = Enum.Material['Plastic']
+	part7.Transparency = 0
+	part7.Reflectance = 0
+	part7.Anchored = true
+	part7.CanCollide = true
+	part7.Locked = false
+	
+end
+coroutine.wrap(BZVVTTH_fake_script)()
