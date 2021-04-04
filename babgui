@@ -231,7 +231,7 @@ bg.Image = "rbxassetid://6533134734"
 
 -- Scripts:
 
-local function BXWQAG_fake_script() -- Minimize.MinimizeScript 
+local function JUVRBOG_fake_script() -- Minimize.MinimizeScript 
 	local script = Instance.new('LocalScript', Minimize)
 
 	function leftClick()
@@ -242,8 +242,8 @@ local function BXWQAG_fake_script() -- Minimize.MinimizeScript
 	script.Parent.MouseButton1Click:Connect(leftClick)
 	
 end
-coroutine.wrap(BXWQAG_fake_script)()
-local function YEPHMZ_fake_script() -- Close.CloseScript 
+coroutine.wrap(JUVRBOG_fake_script)()
+local function GYKSD_fake_script() -- Close.CloseScript 
 	local script = Instance.new('LocalScript', Close)
 
 	function leftClick()
@@ -254,8 +254,8 @@ local function YEPHMZ_fake_script() -- Close.CloseScript
 	script.Parent.MouseButton1Click:Connect(leftClick)
 	
 end
-coroutine.wrap(YEPHMZ_fake_script)()
-local function AZRE_fake_script() -- Maximize.MaximizeScript 
+coroutine.wrap(GYKSD_fake_script)()
+local function LBPXJ_fake_script() -- Maximize.MaximizeScript 
 	local script = Instance.new('LocalScript', Maximize)
 
 	function leftClick()
@@ -266,8 +266,8 @@ local function AZRE_fake_script() -- Maximize.MaximizeScript
 	script.Parent.MouseButton1Click:Connect(leftClick)
 	
 end
-coroutine.wrap(AZRE_fake_script)()
-local function QVQXTIW_fake_script() -- MainFrame.SoundScript 
+coroutine.wrap(LBPXJ_fake_script)()
+local function TWATH_fake_script() -- MainFrame.SoundScript 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	script.Name = "SoundScript"
@@ -287,8 +287,8 @@ local function QVQXTIW_fake_script() -- MainFrame.SoundScript
 	ErrorSound.Parent = script
 	ErrorSound.SoundId = "rbxassetid://3041205264"
 end
-coroutine.wrap(QVQXTIW_fake_script)()
-local function QTKCXZD_fake_script() -- MainFrame.DragScript 
+coroutine.wrap(TWATH_fake_script)()
+local function ATLWPP_fake_script() -- MainFrame.DragScript 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	script.Name = "DragScript"
@@ -333,8 +333,8 @@ local function QTKCXZD_fake_script() -- MainFrame.DragScript
 		end
 	end)
 end
-coroutine.wrap(QTKCXZD_fake_script)()
-local function GCTKIWS_fake_script() -- Checkbox.SetValue 
+coroutine.wrap(ATLWPP_fake_script)()
+local function PFJFDV_fake_script() -- Checkbox.SetValue 
 	local script = Instance.new('LocalScript', Checkbox)
 
 	local player = game.Players.LocalPlayer
@@ -354,7 +354,10 @@ local function GCTKIWS_fake_script() -- Checkbox.SetValue
 		end
 	end
 	
-	local waitTime = script.Parent.Parent.waitTime
+	local waitTime = Instance.new("NumberValue")
+	waitTime.Parent = script.Parent.Parent
+	waitTime.Value = "1"
+	waitTime.Name = "waitTime"
 	
 	local stage1 = CFrame.new(-48,25,1376)
 	local stage2 = CFrame.new(-48,25,2133)
@@ -399,22 +402,24 @@ local function GCTKIWS_fake_script() -- Checkbox.SetValue
 	
 	
 end
-coroutine.wrap(GCTKIWS_fake_script)()
-local function ZFRHNNE_fake_script() -- WaitTimeEnter.updater 
+coroutine.wrap(PFJFDV_fake_script)()
+local function PTECBVV_fake_script() -- WaitTimeEnter.updater 
 	local script = Instance.new('LocalScript', WaitTimeEnter)
 
-	local waitTime = script.Parent.Parent.Parent.AutoGrind.waitTime
+	local waitTime = script.Parent.Parent.Parent.AutoGrind:WaitForChild("waitTime")
 	
 	while true do
 		wait(1)
+		if waitTime then
 		if script.Parent.Text == "" or " " then print("no value")
 			else
 		waitTime.Value = script.Parent.Text
 		end
-	end
+		end
+		end
 end
-coroutine.wrap(ZFRHNNE_fake_script)()
-local function BZVVTTH_fake_script() -- GenBridgeButton.ahhahabridgegobesfskfdslk 
+coroutine.wrap(PTECBVV_fake_script)()
+local function GPDTDLJ_fake_script() -- GenBridgeButton.ahhahabridgegobesfskfdslk 
 	local script = Instance.new('LocalScript', GenBridgeButton)
 
 	local part1 = Instance.new('Part', game.Workspace)
@@ -510,4 +515,4 @@ local function BZVVTTH_fake_script() -- GenBridgeButton.ahhahabridgegobesfskfdsl
 	part7.Locked = false
 	
 end
-coroutine.wrap(BZVVTTH_fake_script)()
+coroutine.wrap(GPDTDLJ_fake_script)()
