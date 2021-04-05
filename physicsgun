@@ -1,0 +1,81 @@
+--Made by TimeForExploiting#9595
+
+local ScreenGui = Instance.new("ScreenGui")
+local Mine = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_Roundify_8px = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_Roundify_8px = Instance.new("ImageLabel")
+
+ScreenGui.Parent = game.CoreGui
+
+Mine.Name = "Mine"
+Mine.Parent = ScreenGui
+Mine.BackgroundColor3 = Color3.fromRGB(255, 247, 12)
+Mine.BackgroundTransparency = 1.000
+Mine.Position = UDim2.new(0.494080454, 0, 0.39094159, 0)
+Mine.Size = UDim2.new(0, 237, 0, 90)
+Mine.Image = "rbxassetid://3570695787"
+Mine.ImageColor3 = Color3.fromRGB(255, 247, 12)
+Mine.ScaleType = Enum.ScaleType.Slice
+Mine.SliceCenter = Rect.new(100, 100, 100, 100)
+Mine.SliceScale = 0.667
+Mine.Active = true
+Mine.Draggable = true
+
+TextButton.Parent = Mine
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 164, 37)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.130801678, 0, 0.311111122, 0)
+TextButton.Size = UDim2.new(0, 174, 0, 50)
+TextButton.ZIndex = 3
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Physics Gun"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/A1BQc2pf'))()
+end)
+
+TextButton_Roundify_8px.Name = "TextButton_Roundify_8px"
+TextButton_Roundify_8px.Parent = TextButton
+TextButton_Roundify_8px.Active = true
+TextButton_Roundify_8px.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_8px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_8px.BackgroundTransparency = 1.000
+TextButton_Roundify_8px.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_8px.Selectable = true
+TextButton_Roundify_8px.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_8px.ZIndex = 2
+TextButton_Roundify_8px.Image = "rbxassetid://3570695787"
+TextButton_Roundify_8px.ImageColor3 = Color3.fromRGB(255, 194, 89)
+TextButton_Roundify_8px.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_8px.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_8px.SliceScale = 0.667
+
+TextLabel.Parent = Mine
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 164, 37)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.109704643, 0, 0.122222222, 0)
+TextLabel.Size = UDim2.new(0, 184, 0, 10)
+TextLabel.ZIndex = 3
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Made by TimeForExploiting#9595"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+TextLabel_Roundify_8px.Name = "TextLabel_Roundify_8px"
+TextLabel_Roundify_8px.Parent = TextLabel
+TextLabel_Roundify_8px.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_Roundify_8px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_Roundify_8px.BackgroundTransparency = 1.000
+TextLabel_Roundify_8px.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_Roundify_8px.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_Roundify_8px.ZIndex = 2
+TextLabel_Roundify_8px.Image = "rbxassetid://3570695787"
+TextLabel_Roundify_8px.ImageColor3 = Color3.fromRGB(255, 184, 70)
+TextLabel_Roundify_8px.ScaleType = Enum.ScaleType.Slice
+TextLabel_Roundify_8px.SliceCenter = Rect.new(100, 100, 100, 100)
+TextLabel_Roundify_8px.SliceScale = 0.667
