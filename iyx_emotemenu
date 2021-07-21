@@ -1,0 +1,354 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local feEmotesList_IYx = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local TopBar = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+local Content = Instance.new("Frame")
+local List = Instance.new("ScrollingFrame")
+local r6_holder = Instance.new("Frame")
+local Header = Instance.new("TextLabel")
+local Text = Instance.new("TextLabel")
+local Cases = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local r15_holder = Instance.new("Frame")
+local Header_2 = Instance.new("TextLabel")
+local Text_2 = Instance.new("TextLabel")
+local Cases_2 = Instance.new("Frame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local buttonHolder = Instance.new("Frame")
+local r6btn = Instance.new("TextButton")
+local r15btn = Instance.new("TextButton")
+local emoteTemplate = Instance.new("Frame")
+local emoteName = Instance.new("TextLabel")
+
+--Properties:
+
+feEmotesList_IYx.Name = "feEmotesList_IYx"
+feEmotesList_IYx.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+feEmotesList_IYx.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = feEmotesList_IYx
+Main.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+Main.BackgroundTransparency = 1.000
+Main.BorderColor3 = Color3.fromRGB(40, 40, 40)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.244897962, 0, 0.229885057, 0)
+Main.Size = UDim2.new(0, 500, 0, 20)
+Main.ZIndex = 10
+
+TopBar.Name = "TopBar"
+TopBar.Parent = Main
+TopBar.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+TopBar.BorderSizePixel = 0
+TopBar.Size = UDim2.new(1, 0, 0, 20)
+TopBar.ZIndex = 10
+
+Title.Name = "Title"
+Title.Parent = TopBar
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Size = UDim2.new(1, 0, 0.949999988, 0)
+Title.ZIndex = 10
+Title.Font = Enum.Font.SourceSans
+Title.Text = "FE Emotes"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 14.000
+
+Close.Name = "Close"
+Close.Parent = TopBar
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(1, -20, 0, 0)
+Close.Size = UDim2.new(0, 20, 0, 20)
+Close.ZIndex = 10
+Close.Font = Enum.Font.SourceSans
+Close.Text = ""
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 14.000
+
+ImageLabel.Parent = Close
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0, 5, 0, 5)
+ImageLabel.Size = UDim2.new(0, 10, 0, 10)
+ImageLabel.ZIndex = 10
+ImageLabel.Image = "rbxassetid://5054663650"
+
+Content.Name = "Content"
+Content.Parent = Main
+Content.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+Content.BorderSizePixel = 0
+Content.Position = UDim2.new(0, 0, 0, 20)
+Content.Size = UDim2.new(1, 0, 0, 300)
+Content.ZIndex = 10
+
+List.Name = "List"
+List.Parent = Content
+List.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+List.BackgroundTransparency = 1.000
+List.BorderColor3 = Color3.fromRGB(40, 40, 40)
+List.BorderSizePixel = 0
+List.Size = UDim2.new(1, 0, 1, 0)
+List.ZIndex = 10
+List.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+List.CanvasSize = UDim2.new(0, 0, 0, 1295)
+List.ScrollBarThickness = 8
+List.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+List.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+
+r6_holder.Name = "r6_holder"
+r6_holder.Parent = List
+r6_holder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+r6_holder.BackgroundTransparency = 1.000
+r6_holder.Size = UDim2.new(1, 0, 0, 411)
+r6_holder.ZIndex = 10
+
+Header.Name = "Header"
+Header.Parent = r6_holder
+Header.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Header.BackgroundTransparency = 1.000
+Header.Position = UDim2.new(0, 8, 0, 5)
+Header.Size = UDim2.new(1, -8, 0, 20)
+Header.ZIndex = 10
+Header.Font = Enum.Font.SourceSansBold
+Header.Text = "R6 Emotes:"
+Header.TextColor3 = Color3.fromRGB(255, 255, 255)
+Header.TextSize = 20.000
+Header.TextXAlignment = Enum.TextXAlignment.Left
+
+Text.Name = "Text"
+Text.Parent = r6_holder
+Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text.BackgroundTransparency = 1.000
+Text.Position = UDim2.new(0, 8, 0, 25)
+Text.Size = UDim2.new(1, -8, 0, 20)
+Text.ZIndex = 10
+Text.Font = Enum.Font.SourceSans
+Text.Text = "Each of the following should be typed in chat AFTER \"/e\""
+Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text.TextSize = 14.000
+Text.TextWrapped = true
+Text.TextXAlignment = Enum.TextXAlignment.Left
+
+Cases.Name = "Cases"
+Cases.Parent = r6_holder
+Cases.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+Cases.BackgroundTransparency = 1.000
+Cases.BorderSizePixel = 0
+Cases.Position = UDim2.new(0, 8, 0, 55)
+Cases.Size = UDim2.new(1, -16, 2.14598536, 342)
+Cases.ZIndex = 10
+
+UIListLayout.Parent = Cases
+
+r15_holder.Name = "r15_holder"
+r15_holder.Parent = List
+r15_holder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+r15_holder.BackgroundTransparency = 1.000
+r15_holder.Size = UDim2.new(1, 0, 0, 411)
+r15_holder.Visible = false
+r15_holder.ZIndex = 10
+
+Header_2.Name = "Header"
+Header_2.Parent = r15_holder
+Header_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Header_2.BackgroundTransparency = 1.000
+Header_2.Position = UDim2.new(0, 8, 0, 5)
+Header_2.Size = UDim2.new(1, -8, 0, 20)
+Header_2.ZIndex = 10
+Header_2.Font = Enum.Font.SourceSansBold
+Header_2.Text = "R15 Emotes:"
+Header_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Header_2.TextSize = 20.000
+Header_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Text_2.Name = "Text"
+Text_2.Parent = r15_holder
+Text_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_2.BackgroundTransparency = 1.000
+Text_2.Position = UDim2.new(0, 8, 0, 25)
+Text_2.Size = UDim2.new(1, -8, 0, 20)
+Text_2.ZIndex = 10
+Text_2.Font = Enum.Font.SourceSans
+Text_2.Text = "Each of the following should be typed in chat AFTER \"/e\""
+Text_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text_2.TextSize = 14.000
+Text_2.TextWrapped = true
+Text_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Cases_2.Name = "Cases"
+Cases_2.Parent = r15_holder
+Cases_2.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+Cases_2.BackgroundTransparency = 1.000
+Cases_2.BorderSizePixel = 0
+Cases_2.Position = UDim2.new(0, 8, 0, 55)
+Cases_2.Size = UDim2.new(1, -16, 2.14598536, 342)
+Cases_2.ZIndex = 10
+
+UIListLayout_2.Parent = Cases_2
+
+buttonHolder.Name = "buttonHolder"
+buttonHolder.Parent = Main
+buttonHolder.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+buttonHolder.BackgroundTransparency = 1.000
+buttonHolder.BorderSizePixel = 0
+buttonHolder.Position = UDim2.new(0, 0, 0, 20)
+buttonHolder.Size = UDim2.new(1, 0, 0, 300)
+buttonHolder.ZIndex = 10
+
+r6btn.Name = "r6btn"
+r6btn.Parent = buttonHolder
+r6btn.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+r6btn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+r6btn.BorderSizePixel = 0
+r6btn.Position = UDim2.new(0.0639999956, 0, 0.879999995, 0)
+r6btn.Size = UDim2.new(0, 200, 0, 30)
+r6btn.ZIndex = 25
+r6btn.Font = Enum.Font.SourceSans
+r6btn.Text = "R6"
+r6btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+r6btn.TextScaled = true
+r6btn.TextSize = 14.000
+r6btn.TextWrapped = true
+
+r15btn.Name = "r15btn"
+r15btn.Parent = buttonHolder
+r15btn.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+r15btn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+r15btn.BorderSizePixel = 0
+r15btn.Position = UDim2.new(0.536000013, 0, 0.879999995, 0)
+r15btn.Size = UDim2.new(0, 200, 0, 30)
+r15btn.ZIndex = 25
+r15btn.Font = Enum.Font.SourceSans
+r15btn.Text = "R15"
+r15btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+r15btn.TextScaled = true
+r15btn.TextSize = 14.000
+r15btn.TextWrapped = true
+
+emoteTemplate.Name = "emoteTemplate"
+emoteTemplate.Parent = game.StarterGui.feEmotesList_IYx.createEmotes
+emoteTemplate.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+emoteTemplate.BackgroundTransparency = 1.000
+emoteTemplate.BorderSizePixel = 0
+emoteTemplate.Position = UDim2.new(0, 8, 0, 60)
+emoteTemplate.Size = UDim2.new(1, 0, 0, 18)
+emoteTemplate.ZIndex = 10
+
+emoteName.Name = "emoteName"
+emoteName.Parent = emoteTemplate
+emoteName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+emoteName.BackgroundTransparency = 1.000
+emoteName.Size = UDim2.new(1.03361344, 0, 1, 0)
+emoteName.ZIndex = 10
+emoteName.Font = Enum.Font.SourceSans
+emoteName.Text = "nil"
+emoteName.TextColor3 = Color3.fromRGB(255, 255, 255)
+emoteName.TextSize = 14.000
+emoteName.TextWrapped = true
+emoteName.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Scripts:
+
+local function AWCI_fake_script() -- Close.closeGui 
+	local script = Instance.new('LocalScript', Close)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(AWCI_fake_script)()
+local function KYLRMJK_fake_script() -- Main.Dragify 
+	local script = Instance.new('LocalScript', Main)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(KYLRMJK_fake_script)()
+local function BOJOHE_fake_script() -- buttonHolder.btn 
+	local script = Instance.new('LocalScript', buttonHolder)
+
+	local holderHolder = script.Parent.Parent.Content.List
+	
+	script.Parent.r6btn.MouseButton1Click:Connect(function()
+		holderHolder.r6_holder.Visible = true
+		holderHolder.r15_holder.Visible = false
+	end)
+	
+	script.Parent.r15btn.MouseButton1Click:Connect(function()
+		holderHolder.r6_holder.Visible = false
+		holderHolder.r15_holder.Visible = true
+	end)
+end
+coroutine.wrap(BOJOHE_fake_script)()
+local function PEKFRY_fake_script() -- feEmotesList_IYx.createEmotes 
+	local script = Instance.new('LocalScript', feEmotesList_IYx)
+
+	
+	
+	local emoteTemp = script.emoteTemplate
+	local r6emoteHolder = script.Parent.Main.Content.List.r6_holder.Cases
+	local r15emoteHolder = script.Parent.Main.Content.List.r15_holder.Cases
+	
+	local r6Emotes = {'coolemote1', 'zigzagpog'}
+	local r15Emotes = {'coolemote12', 'zigzagpog23'}
+	
+	for _, emote in pairs(r6Emotes) do
+		print(emote)
+		local et2 = emoteTemp:Clone()
+		et2.Name = emote
+		et2.emoteName.Text = emote
+		et2.Parent = r6emoteHolder
+	end
+	
+	for _, emote in pairs(r15Emotes) do
+		print(emote)
+		local et2 = emoteTemp:Clone()
+		et2.Name = emote
+		et2.emoteName.Text = emote
+		et2.Parent = r15emoteHolder
+	end
+end
+coroutine.wrap(PEKFRY_fake_script)()
